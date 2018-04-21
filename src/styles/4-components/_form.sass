@@ -1,0 +1,91 @@
+input
+  -webkit-appearance: none
+
+.form-inline
+  display: flex
+  margin-top: 3.2rem
+  +respond-to('m')
+    flex-direction: column
+    align-items: flex-start
+
+  //not a good practice to have a two level selector...
+  .input__regular-box
+    flex-grow: 2
+    margin-right: 1.6rem
+    +respond-to('m')
+      width: 100%
+      margin-bottom: 2.4rem
+
+%input-icon
+  position: absolute
+  left: 2.4rem
+  z-index: 11
+
+%input
+  padding: 2rem 2.4rem 2rem 6rem
+  border-radius: .2rem
+  border: .1rem solid $color-gray-scale-light
+  @extend .p
+  width: 100%
+  color: $color-gray-scale-darker
+  outline: none
+
+.input
+  +element('regular-box')
+    position: relative
+
+  +element('textarea-box')
+    position: relative
+
+  +element('icon-mail')
+    @extend %input-icon
+    top: 50%
+    transform: translateY(-50%)
+
+  +element('icon-name')
+    @extend %input-icon
+    top: 50%
+    transform: translateY(-50%)
+
+  +element('icon-message')
+    @extend %input-icon
+    top: 2.6rem
+
+  +element('regular')
+    height: 5.7rem
+    z-index: 10
+    position: relative
+    @extend %input
+
+  +element('textarea')
+    @extend .p
+    @extend %input
+    border: .1rem solid $color-gray-scale-light
+    resize: none
+    padding: 2rem 2.4rem 2rem 6rem
+    width: 100%
+    height: 28rem
+
+  +element('submit-box')
+    position: relative
+    display: inline-block
+
+  +element('submit-shadow')
+    transition: all $transition-duration-base $transition-timing-base
+    +shadow-btn
+    z-index: 1
+
+    &.is-active
+      width: 75%
+      transform: scale(0)
+      box-shadow: 0 0 .2rem 0 rgba($color-interactive , .2), 0 0 2rem 0 rgba($color-gray-scale-darker, .2)
+
+  +element('submit')
+    @extend .btn
+    border: 0 none
+    z-index: 2
+    outline: 0
+    transition: all $transition-duration-base $transition-timing-base
+
+::placeholder
+    color: $color-gray-scale-dark

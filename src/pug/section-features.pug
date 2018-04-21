@@ -1,0 +1,21 @@
+mixin feature(img, alt, icon, title)
+  .feature
+    .feature__img-box
+      img(src='img/'+ img +'', alt='' + alt + '').feature__img
+    .feature__info-box
+      .feature__icon-box
+        +svg(icon)
+      h4.h4.u-mb-l= title 
+      p.p Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa.
+
+
+mixin section-features
+  section.section-features#section-features
+    .row
+      h2.h2 features
+  
+    .features.row
+      +feature('feature-equipment.jpg', 'woman doing soprt with a rope ', 'equipment', 'use equipments like professionas')
+      +feature('feature-community.jpg', 'group of women in a gym class', 'community', 'we are a community')
+      +feature('feature-physio.jpg', 'physio doing a session', 'physio', 'not all is training')
+      

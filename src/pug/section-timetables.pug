@@ -1,0 +1,144 @@
+mixin session(icon, hour, title, duration, instructor, studio)
+  .session
+    .session__hour-and-icon
+      .session__icon-box
+        +svg(icon)
+      .session__hour= hour
+    .session__text
+      h4.h4.u-mb-m= title
+      p.p.u-mb-l Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed.
+      .session__details
+        .session__detail
+          p.p.p--bold Duration:
+          p.p= duration
+        .session__detail
+          p.p.p--bold Instructor:
+          p.p= instructor
+        .session__detail
+          p.p.p--bold Studio:
+          p.p= studio
+  
+mixin section-timetables
+  section.section-timetables#section-timetables
+    .row
+      h2.h2 timetable of our classes
+      
+    .tabs-table.row
+      
+      .tabs-table__tabs
+        a(href="javascript:void(0)" rel="tab-1").tabs-table__tab.is-active.js-tab Monday
+        a(href="javascript:void(0)" rel="tab-2").tabs-table__tab.js-tab Tuesday
+        a(href="javascript:void(0)" rel="tab-3").tabs-table__tab.js-tab Wednesday
+        a(href="javascript:void(0)" rel="tab-4").tabs-table__tab.js-tab Thursday
+        a(href="javascript:void(0)" rel="tab-5").tabs-table__tab.js-tab Friday
+        
+      .tabs-table__content-container
+        
+        a(href="javascript:void(0)" rel="tab-1").tabs-table__tab-accordion.js-tab-accordion.is-active Monday
+        #tab-1.tabs-table_content.js-tab-content
+          +session(
+            'pilates',
+            '11:00',
+            'Pilates',
+            '30 minutes',
+            'John Robertson',
+            'Studio A'  
+          )
+          
+          +session(
+            'bodypump',
+            '12:00',
+            'Bodypump',
+            '60 minutes',
+            'Kathy Hayes',
+            'Studio B'  
+          )
+          
+          +session(
+            'step',
+            '19:00',
+            'Step',
+            '45 minutes',
+            'Charles Boyd',
+            'Studio A'  
+          )
+          
+          +session(
+            'spinning',
+            '20:00',
+            'Spinning',
+            '45 minutes',
+            'Janet George',
+            'Studio C'  
+          )
+          
+        a(href="javascript:void(0)" rel="tab-2").tabs-table__tab-accordion.js-tab-accordion Tuesday
+        #tab-2.tabs-table_content.js-tab-content
+          +session(
+            'step',
+            '19:00',
+            'Step',
+            '45 minutes',
+            'Charles Boyd',
+            'Studio A'  
+          )
+          
+          +session(
+            'spinning',
+            '20:00',
+            'Spinning',
+            '45 minutes',
+            'Janet George',
+            'Studio C'  
+          )
+          
+        a(href="javascript:void(0)" rel="tab-3").tabs-table__tab-accordion.js-tab-accordion Wednesday
+        #tab-3.tabs-table_content.js-tab-content
+          +session(
+            'bodypump',
+            '12:00',
+            'Bodypump',
+            '60 minutes',
+            'Kathy Hayes',
+            'Studio B'  
+          )
+          
+          +session(
+            'step',
+            '19:00',
+            'Step',
+            '45 minutes',
+            'Charles Boyd',
+            'Studio A'  
+          )
+          
+        a(href="javascript:void(0)" rel="tab-4").tabs-table__tab-accordion.js-tab-accordion Thursday
+        #tab-4.tabs-table_content.js-tab-content
+          +session(
+            'step',
+            '19:00',
+            'Step',
+            '45 minutes',
+            'Charles Boyd',
+            'Studio A'  
+          )
+          
+        a(href="javascript:void(0)" rel="tab-5").tabs-table__tab-accordion.js-tab-accordion Friday
+        #tab-5.tabs-table_content.js-tab-content
+          +session(
+            'step',
+            '19:00',
+            'Step',
+            '45 minutes',
+            'Charles Boyd',
+            'Studio A'  
+          )
+          
+
+          
+              
+            
+
+        
+            
+          

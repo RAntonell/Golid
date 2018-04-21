@@ -1,3 +1,23 @@
 mixin footer
-  footer
-      p © 2017 
+  footer.footer
+    .footer__upper-box
+      .row
+        .footer__logo-box
+          +svg('logo')
+        +nav
+      
+    .footer__lower-box
+      .row
+        .label.label--darker Copyright © 2018 Golid Gym, All rights reserved
+      
+        .footer__social-box
+          a(href="javascript:void(0)").footer__social-link
+            +svg('social-facebook')
+          a(href="javascript:void(0)").footer__social-link 
+            +svg('social-twitter')
+          a(href="javascript:void(0)").footer__social-link
+            +svg('social-instagram')
+          
+
+              
+              

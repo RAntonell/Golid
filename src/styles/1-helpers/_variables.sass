@@ -1,5 +1,5 @@
 //typography
-$font-family-base: 'Share', sans-serif
+$font-family-base: 'Ubuntu', sans-serif
 $font-family-heading: $font-family-base
 $font-size-base: 1.6rem
 
@@ -8,7 +8,8 @@ $font-size-base: 1.6rem
 // m(medium) = 768px / 16px = 48em
 // l(large) = 992px / 16px = 62em
 // xl(extra-large) = 1200px / 16px = 75em
-$breakpoints: ('s': (min-width: 36em), 'm': (min-width: 48em), 'l': (min-width: 62em), 'xl': (min-width: 75em), 'grid': (min-width: 48em))
+// xl(extra-large) = 1600px / 16px = 100em
+$breakpoints: ('s': (max-width: 36em), 'm': (max-width: 48em), 'l': (max-width: 62em), 'xl': (max-width: 75em), 'xxl': (min-width: 150em), 'grid': (min-width: 48em))
 
 //nice colors
 $color-aqua:  #7FDBFF
@@ -31,18 +32,18 @@ $color-light-gray: #ddd
 $color-white:  #fff
 
 //color pallete
-$color-layout: $color-fuchsia
+$color-layout: #FFCB06
 
-$color-interactive: $color-lime
+$color-interactive: #EF3740
 $color-interactive-dark: shade($color-interactive, 30%)
 $color-interactive-darker: shade($color-interactive, 50%)
 $color-interactive-light: tint($color-interactive, 30%)
 $color-interactive-lighter: tint($color-interactive, 50%)
 
-$color-gray-scale-lighter: $color-light-gray
-$color-gray-scale-light: $color-medium-gray
-$color-gray-scale-dark: $color-dark-gray
-$color-gray-scale-darker: $color-black
+$color-gray-scale-darker: #19191A
+$color-gray-scale-dark: #7D7E80
+$color-gray-scale-light: #C8CACC
+$color-gray-scale-lighter: #F5F8FA
 
 $color-system-error: $color-red
 $color-system-success: $color-green
@@ -62,7 +63,7 @@ $transition-timing-base-bounce: $ease-in-out-back
 $transition-timing-base: $ease-in-quad
 
 //grid configuration
-$grid-width: 115.2rem
+$grid-width: 124.8rem
 $grid-width-small: 48rem
 $grid-gutter-vertical: 6.4rem
 $grid-gutter-vertical-small: 4rem
@@ -77,4 +78,5 @@ $spacing-s: .8rem
 $spacing-m: 1.6rem
 $spacing-l: 2.4rem
 $spacing-xl: 3.2rem
-$spacing-xxl: 4.8rem
+$spacing-xxl: 4rem
+$spacing-xxxl: 4rem

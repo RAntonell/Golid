@@ -1,1 +1,74 @@
 .header
+  background:
+    image: url('../img/value-proposition.jpg')
+    size: cover
+    repeat: no-repeat
+    position: center top
+  padding-top: 3.2rem
+  padding-bottom: 29.6rem
+  +respond-to('s')
+    padding-bottom: 20rem
+    background-position: -75rem center
+
+  +respond-to('xxl')
+    background-size: contain
+    background-color: #102632
+
+  +element('upper-box')
+    display: flex
+    align-items: center
+
+  +element('logo-box')
+    margin-right: auto
+
+  +element('text-box')
+    margin-top: 21.6rem
+    max-width: 59.2rem
+    +respond-to('m')
+      margin-top: 15rem
+
+  +element('icon')
+    display: none
+    position: absolute
+    right: 3.2rem
+    top: 3.2rem
+    width: 4rem
+    height: 4rem
+    z-index: 30
+    +respond-to('l')
+      display: block
+
+    //not good practice to have a two level selector...
+    &.is-active .header__hamburger
+      background-color: rgba(0, 0, 0, 0)
+
+      &:after
+        top: 0
+        transform: rotate(135deg)
+
+      &:before
+        top: 0
+        transform: rotate(45deg)
+
+  +element('hamburger')
+    width: 100%
+    height: .4rem
+    position: absolute
+    +center(false, true)
+    background-color: $color-white
+    transition: all $transition-duration-base $transition-timing-base
+
+    &:after, &::before
+      content: ''
+      display: block
+      height: .4rem
+      width: 100%
+      background-color: $color-white
+      position: absolute
+      transition: all $transition-duration-base $transition-timing-base
+
+    &:after
+      top: 1.8rem
+
+    &:before
+      top: -1.8rem

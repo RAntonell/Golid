@@ -2,28 +2,84 @@ include head
 include header
 include main-home
 include footer
-
-mixin list
-  ul
-    li foo
-    li bar
-    li baz
-    
-mixin pet(name)
-  li.pet= name
+include section-testimonials
+include section-benefits
+include section-features
+include section-cta
+include section-timetables
+include section-prices
+include section-contact
 
 //- insert svg icons into html
 mixin svg(name)
   
   case name
-    when 'facebook'
-      include ../img/svg/facebook.svg
+    when 'logo'
+      include ../img/svg/logo.svg
   
-    when 'twitter'
-      include ../img/svg/twitter.svg
+    when 'quote-mark'
+      include ../img/svg/quote-mark.svg
   
-    when 'instagram'
-      include ../img/svg/instagram.svg
+    when 'lose-weight'
+      include ../img/svg/lose-weight.svg
+  
+    when 'gain-muscule'
+      include ../img/svg/gain-muscule.svg
+  
+    when 'improve-diet'
+      include ../img/svg/improve-diet.svg
+  
+    when 'improve-heart'
+      include ../img/svg/improve-heart.svg
+  
+    when 'equipment'
+      include ../img/svg/equipment.svg
+  
+    when 'community'
+      include ../img/svg/community.svg
+  
+    when 'physio'
+      include ../img/svg/physio.svg
+  
+    when 'step'
+      include ../img/svg/step.svg
+  
+    when 'bodypump'
+      include ../img/svg/bodypump.svg
+  
+    when 'pilates'
+      include ../img/svg/pilates.svg
+  
+    when 'spinning'
+      include ../img/svg/spinning.svg
+  
+    when 'input-name'
+      include ../img/svg/input-name.svg
       
+    when 'input-mail'
+      include ../img/svg/input-mail.svg
+      
+    when 'input-message'
+      include ../img/svg/input-message.svg
+      
+    when 'social-facebook'
+      include ../img/svg/social-facebook.svg
+    
+    when 'social-twitter'
+      include ../img/svg/social-twitter.svg
+    
+    when 'social-instagram'
+      include ../img/svg/social-instagram.svg
+    
     default
-      p don't find this icon
+      p #{name} isn't an svg
+
+mixin nav
+  nav.nav
+    ul.nav-list
+      li.nav__item: a(href="#section-testimonials").nav__link testimonials
+      li.nav__item: a(href="#section-benefits").nav__link benefits
+      li.nav__item: a(href="#section-features").nav__link features
+      li.nav__item: a(href="#section-timetables").nav__link timetables
+      li.nav__item: a(href="#section-prices").nav__link prices
+      li.nav__item: a(href="#section-contact").nav__link contact

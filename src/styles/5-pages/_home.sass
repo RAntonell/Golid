@@ -1,1 +1,43 @@
+.section-contact__box, .section-testimonials, .section-benefits
+  position: relative
 
+.section-testimonials, .section-benefits
+  overflow: hidden
+
+.section-testimonials
+  padding-bottom: .4rem
+
+.section-cta
+  background-color: $color-gray-scale-lighter
+  position: relative
+  padding: 12rem 0
+  margin-top: 22rem
+
+  +element('text-box')
+
+  +element('img')
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    width: 40%
+    background:
+      image: url('../img/cta-training-women.jpg')
+      size: cover
+      repeat: no-repeat
+      position: center top
+    +respond-to('l')
+      width: 100%
+      opacity: .2
+      z-index: 1
+
+.section-contact
+  margin-bottom: 22rem
+  +respond-to('l')
+    margin-bottom: 60rem
+
+
+[class^='section-']
+  margin-left: auto
+  margin-right: auto
+  max-width: 220rem

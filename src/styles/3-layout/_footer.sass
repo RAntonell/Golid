@@ -1,1 +1,52 @@
 .footer
+  +respond-to('m')
+    text-align: center
+  //svg
+  svg
+    transition: all $transition-timing-base $transition-duration-base
+    fill: $color-gray-scale-darker
+
+  svg:hover
+    fill: $color-interactive
+
+  +element('upper-box')
+    background-color: $color-gray-scale-darker
+    padding: 4rem
+
+    //not a good practice to have a two level selector...
+    .row
+      display: flex
+      align-items: center
+      +respond-to('l')
+        flex-direction: column
+        align-items: flex-start
+      +respond-to('m')
+        align-items: center
+
+  +element('logo-box')
+    margin-right: auto
+    +respond-to('m')
+      margin-right: 0
+
+  +element('lower-box')
+    background-color: $color-layout
+    padding: 1.6rem 0
+
+    //not a good practice to have a two level selector...
+    .row
+      display: flex
+      align-items: center
+      +respond-to('m')
+        flex-direction: column
+
+
+  +element('social-box')
+    margin-left: auto
+    +respond-to('m')
+      margin-left: 0
+      margin-top: 1.6rem
+
+  +element('social-link')
+
+    &:not(:last-child)
+      margin-right: 4.8rem

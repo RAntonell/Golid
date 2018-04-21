@@ -55,3 +55,35 @@
     left: 0
     right: 0
     bottom: 0
+
+@mixin title-decoration
+  &::before, &::after
+    content: ''
+    display: block
+    background-color: $color-layout
+    position: absolute
+    transform: rotate(-45deg)
+    transform-origin: center
+    height: .4rem
+    top: 3.2rem
+
+  &::before
+    width: 10.4rem
+    top: 2.6rem
+    left: -2.1rem
+
+  &::after
+    width: 7.2rem
+    top: 3.5rem
+    left: .4rem
+
+@mixin shadow-btn
+  display: block
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  width: 80%
+  z-index: -1
+  box-shadow: 0 0 1.6rem 0 rgba($color-interactive , .2), 0 0 2.4rem 0 rgba($color-gray-scale-darker, .2)
+  height: 50%

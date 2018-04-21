@@ -1,6 +1,18 @@
 mixin header
-  header
-    h1.h1 about
-    h2.h2 about
-    h3.h3 about
-    h4.h4 about
+  header.header
+    
+    .header__upper-box.row
+      .header__logo-box
+        +svg('logo')
+        
+      .header__icon.js-icon
+        .header__hamburger
+    
+      +nav
+          
+    .row
+      .header__text-box
+        h1.jumbo gym 24/7</br> no excuses
+        p.p.p--white.u-mt-l.u-mb-xl Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur. 
+        a(href="javascript:void(0)").btn get a free pass
+      

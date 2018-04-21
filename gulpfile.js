@@ -28,7 +28,7 @@ const gulp             = require('gulp'),
 // image processing
 gulp.task('images', function() {
   var out = folder.dist + 'img/';
-  gulp.src(folder.src + 'img/**/*.{png,gif,jpg}')
+  gulp.src(folder.src + 'img/*')
     .pipe(newer(out))
     .pipe(imagemin())
     .pipe(gulp.dest(out));
@@ -36,9 +36,9 @@ gulp.task('images', function() {
 
 //optimize the svg in the same folder
 gulp.task('svg', function () {
-  return gulp.src(folder.src + 'img/**/*.svg')
+  return gulp.src(folder.src + 'img/svg/*.svg')
     .pipe(svgmin())
-    .pipe(gulp.dest(folder.src + 'img/'));
+    .pipe(gulp.dest(folder.src + 'img/svg'));
 });
 
 // JavaScript processing
@@ -107,7 +107,7 @@ gulp.task('fonts', function() {
 });
 
 //Default task
-gulp.task('default',['pug', 'sass', 'images', 'svg', 'js', 'fonts', 'browser-sync'], function() {
+gulp.task('default',['images', 'svg', 'pug', 'sass', 'js', 'fonts', 'browser-sync'], function() {
   if(!isProd) {
     gulp.watch(folder.src  + '**/*.pug', ['pug']);
     gulp.watch(folder.src  + '**/*.sass', ['sass']);

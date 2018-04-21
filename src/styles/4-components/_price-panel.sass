@@ -1,0 +1,64 @@
+.prices-panels-box
+  display: flex
+  +respond-to('l')
+    display: block
+    max-width: 48rem
+
+.price-panel
+  padding: 3.2rem
+  width: calc(100% / 3)
+  border-top: .4rem solid $color-layout
+  position: relative
+  +respond-to('l')
+    width: 100%
+
+
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: block
+    z-index: -10
+    background-color: $color-gray-scale-lighter
+
+  &:not(:last-child)
+    margin-right: 3.2rem
+    +respond-to('l')
+      margin-bottom: 3.2rem
+
+  +element('price')
+    display: flex
+    align-items: flex-end
+    margin-bottom: 6.4rem
+
+    //not a good practice to have a two level selector...
+    .h1
+      margin: 0
+      position: relative
+      top: .3rem
+      margin-right: .8rem
+      &::after, &::before
+        display: none
+
+  +element('popular')
+    background-color: $color-layout
+    padding: .8rem
+    top: 3.4rem
+    @extend %text-link
+    text-shadow: none
+    position: absolute
+    right: 0
+
+  +element('features-and-btn')
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    +respond-to('xl')
+      min-height: 26rem
+    +respond-to('l')
+      min-height: inherit

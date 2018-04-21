@@ -9,18 +9,34 @@ a
     outline-width: 0
 
 .btn
-  &:link,
-  &:visited
-    color: contrast-switch($color-interactive)
-    background-color: $color-interactive
+  @extend %text-link
+  padding: 20px 40px
+  border-radius: .2rem
+  position: relative
+  background-color: $color-interactive
+
+  &:after
+    content: ''
+    +shadow-btn
 
   &:hover
     background-color: $color-interactive-dark
 
+
+  &:active
+    background-color: $color-interactive-darker
+    transform: scale(.98)
+
+    &:after
+      width: 75%
+      transform: scale(0)
+      box-shadow: 0 0 .2rem 0 rgba($color-interactive , .2), 0 0 2rem 0 rgba($color-gray-scale-darker, .2)
+
 .btn-text
   &:link,
   &:visited
-    color: $color-interactive
+    @extend %text-link
+    text-shadow: 0 0 .8rem rgba($color-gray-scale-darker, 0.5)
 
   &:hover
-    color: $color-interactive-dark
+    color: $color-interactive

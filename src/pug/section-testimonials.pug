@@ -1,0 +1,21 @@
+mixin section-testimonials
+  section.section-testimonials#section-testimonials
+    .row
+      h2.h2 What others think about us
+      
+    .testimonials.row
+      .testimonials__thumbnails-box
+        .testimonials__thumbnail.is-active.js-thumbnail(data-src='testimonial-1' data-name='Bobby Robertson' data-position='Personal trainer' data-quote='I’ve personally been a member of Golid Gyms and found them to be very friendly and helpful in comparison to other gyms.')
+        .testimonials__thumbnail.js-thumbnail(data-src='testimonial-2' data-name='Evelyn Greer' data-position='Talk Sport' data-quote='The gym is big and has everything. I would definitely recommend Golid Gym and the staff are extremely friendly and helpful.')
+        .testimonials__thumbnail.js-thumbnail(data-src='testimonial-3' data-name='Vincent Chandler' data-position='Physio' data-quote='Golid Gym have always been more flexible than other gyms')
+        .testimonials__thumbnail.js-thumbnail(data-src='testimonial-4' data-name='Charlie Hines' data-position='User of the gym' data-quote='The difference between Golid Gyms and other gyms is they have everything I need')
+      .testimonials__quote-box
+        p.testimonials__quote I’ve personally been a member of Golid Gyms and found them to be very friendly and helpful in comparison to other gyms.
+        .testimonials__quote-author-box
+          .testimonials__mark
+            +svg('quote-mark')
+          .testimonials__name-and-position
+            .testimonials__name Bobby Robertson
+            .testimonials__position Personal trainer      
+      .testimonials__img
+        

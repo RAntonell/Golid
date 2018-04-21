@@ -1,0 +1,22 @@
+.feature
+  display: flex
+  align-items: center
+  +respond-to('m')
+    flex-direction: column
+
+  &:not(:last-child)
+    margin-bottom: 3.2rem
+
+  +element('img-box')
+    width: 100%
+    margin-right: 3.2rem
+    min-width: 32rem
+    +respond-to('m')
+      margin-right: 0
+      margin-bottom: 3.2rem
+      min-width: inherit
+
+  +element('icon-box')
+    margin-bottom: 4rem
+    +respond-to('m')
+      display: none

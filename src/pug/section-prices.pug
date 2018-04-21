@@ -1,0 +1,48 @@
+mixin price-panel(title, price, feature_1, feature_2, feature_3, popular)
+  .price-panel
+    if popular
+      .price-panel__popular Popular
+    h3.h3.u-mb-l= title
+    .price-panel__price 
+      .h1= price
+      span.p.p--bold / Month
+    .price-panel__features-and-btn
+      .price-panel__features
+        .p.u-mb-l= feature_1
+        .p.u-mb-l= feature_2
+        .p.u-mb-xxl= feature_3
+      a(href="javascript:void(0)").btn sign on
+
+mixin section-prices
+  section.section-prices#section-prices
+    .row
+      h2.h2 choose your plan
+    
+    .prices-panels-box.row
+      +price-panel(
+        'amateur', 
+        '$25', 
+        'Access to all our Services, 3 Days a Week', 
+        'Dedicated Trainer', 
+        'Diet plan support with our dietist'
+      )
+      +price-panel(
+        'pro', 
+        '$40', 
+        'Access to all Services 24/7', 
+        'Dedicated Trainer', 
+        'Dedicated Nutritionist',
+        'true'
+      )
+      +price-panel(
+        'internediate', 
+        '$30', 
+        'Access to all our Services, 4 Days a Week', 
+        'Dedicated Trainer', 
+        'Diet plan support with our dietist'
+      )
+        
+      
+        
+      
+    

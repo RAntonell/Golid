@@ -1,0 +1,61 @@
+.tabs-table
+
+  +element('tab-and-content')
+    display: inline
+
+  +element('tabs')
+    background-color: $color-gray-scale-lighter
+    display: flex
+    +respond-to('m')
+      display: none
+
+
+  +element('tab')
+    @extend %text-link
+    color: $color-gray-scale-dark
+    text-shadow: none
+    width: calc(100% / 5)
+    text-align: center
+    padding: 2.2rem 0
+    position: relative
+    font-weight: 400
+
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 0%
+      height: .4rem
+      background-color: $color-interactive
+      transition: all $transition-duration-base $transition-timing-base
+
+    &:hover
+      background-color: rgba($color-gray-scale-light, .5)
+
+
+    &.is-active
+      color: $color-gray-scale-darker
+      font-weight: 700
+
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: .4rem
+        background-color: $color-interactive
+
+  +element('tab-accordion')
+    &:link
+      @extend .tabs-table__tab
+      width: 100%
+      background-color: $color-gray-scale-lighter
+      display: none
+      border-bottom: 1px solid $color-gray-scale-light
+      +respond-to('m')
+        display: block
+
+  .tabs-table__tab-accordion:last-of-type
+      border-bottom: none

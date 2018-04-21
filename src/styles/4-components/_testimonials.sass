@@ -1,0 +1,121 @@
+.testimonials
+  display: flex
+  align-items: center
+  +respond-to('l')
+    flex-direction: column
+
+  +element('thumbnails-box')
+    +respond-to('l')
+      display: flex
+      width: 100%
+      justify-content: space-around
+      margin-bottom: 2.4rem
+    +respond-to('m')
+      justify-content: space-between
+
+  +element('thumbnail')
+    background-color: $color-gray-scale-lighter
+    width: 12rem
+    height: 12rem
+    border-radius: 50%
+    position: relative
+    +respond-to('m')
+      width: 8rem
+      height: 8rem
+    +respond-to('s')
+      width: 6.5rem
+      height: 6.5rem
+
+    &:after
+      content: ''
+      opacity: .5
+      transition: all $transition-duration-base $transition-duration-base
+      background:
+        size: contain
+        repeat: no-repeat
+        position: center 1rem
+      position: absolute
+      border-radius: 50%
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+
+    &:hover:after
+      opacity: 1
+
+    &:not(:last-child)
+      margin-bottom: 3.2rem
+
+    &:nth-child(1):after
+      background-image: url('../img/testimonial-1.png')
+
+    &:nth-child(2):after
+      background-image: url('../img/testimonial-2.png')
+
+    &:nth-child(3):after
+      background-image: url('../img/testimonial-3.png')
+
+    &:nth-child(4):after
+      background-image: url('../img/testimonial-4.png')
+      background:
+        size: 95%
+        position: 1rem 1rem
+
+    &.is-active:after
+      opacity: 1
+      box-shadow: 0 0 0 .4rem $color-interactive
+
+  +element('quote-box')
+    margin: 0 5%
+    max-width: 46%
+    +respond-to('l')
+      max-width: inherit
+      margin-bottom: 3.2rem
+    +respond-to('m')
+      margin-left: 0
+      margin-right: 0
+
+
+  +element('quote')
+    margin-bottom: 2.4rem
+
+  +element('quote-author-box')
+    display: flex
+    align-items: bottom
+
+  +element('mark')
+    margin-right: 1.6rem
+
+  +element('position')
+    @extend .label
+
+  +element('img')
+    transition: background $transition-duration-base $transition-timing-base
+    background:
+      image: url('../img/testimonial-1.png')
+      size: contain
+      repeat: no-repeat
+      position: bottom center
+    width: 40rem
+    height: 52rem
+    position: relative
+    min-width: 30rem
+    +respond-to('m')
+      width: 25rem
+      height: 32rem
+      min-width: inherit
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      height: 26rem
+      bottom: 0
+      width: 300%
+      background-color: $color-gray-scale-lighter
+      z-index: -1
+      +respond-to('l')
+        left: -100%
+      +respond-to('m')
+        height: 16rem

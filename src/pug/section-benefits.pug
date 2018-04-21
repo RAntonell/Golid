@@ -1,0 +1,23 @@
+mixin benefit(title, icon)
+  .benefits__item
+    .benefits__icon-box
+      +svg(icon)
+    .benefits__text-box
+      h4.h4.u-mb-m= title
+      p.p Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius.
+  
+
+mixin section-benefits
+  section.section-benefits#section-benefits
+    .row
+      h2.h2 what we can do for you?
+    
+    .benefits.row
+      .benefits__img
+    
+      .benefits__items-box
+        +benefit('make you lose love handles', 'lose-weight')
+        +benefit('make you gain muscule', 'gain-muscule')
+        +benefit('improve your diet', 'improve-diet')
+        +benefit('improve your heart health', 'improve-heart')
+        
