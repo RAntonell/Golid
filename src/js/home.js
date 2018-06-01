@@ -162,7 +162,7 @@ var map = (function () {
         maxWidth: 300
       }),
       marker = new google.maps.Marker({
-        icon: '../img/dot-map.png',
+        icon: 'img/dot-map.png',
         position: myLatlng,
         map: map,
         title: ''
