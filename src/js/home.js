@@ -89,7 +89,7 @@ $(function() {
     var quoteName = $(this).attr("data-name");
     var quotePosition = $(this).attr("data-position");
 
-    $('.testimonials__img').css('background-image', 'url(../img/' + nameImg + '.png)');
+    $('.testimonials__img').css('background-image', 'url(img/' + nameImg + '.png)');
 
     $('.testimonials__quote').fadeOut(160, function() {
       $(this).text(quoteText).fadeIn(160);
