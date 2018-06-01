@@ -19,5 +19,4 @@ jspm_packages/
 .env
 
 # dist folder and yarn.lock
-dist
 yarn.lock
